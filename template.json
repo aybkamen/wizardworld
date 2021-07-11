@@ -1,4 +1,24 @@
 {
     "Actor": {},
-    "Item": {}
+    "Item": {
+        "types": ["move", "spell"],
+        "templates": {
+            "itemDescription": {
+                "description": ""
+            }
+        },
+        "move": {
+            "templates": ["itemDescription"],
+            "type": ""
+        },
+        "spell": {
+            "templates":["itemDescription"],
+            "technique": "",
+            "form": "",
+            "target": "",
+            "duration": "",
+            "range": "",
+            "difficultyMod" : 0
+        }
+    }
 }
