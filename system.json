@@ -1,0 +1,25 @@
+{
+    "name": "wizardworld",
+    "title": "Wizard World",
+    "description": "A PbtA system to play Ars Magica using Wizard World by Jared Hunt.",
+    "author": "Aybkamen",
+    "version": 0.01,
+    "minimumCoreVersion": "0.8.8",
+    "compatibleCoreVersion":"0.8.8",
+    "esmodules": [
+        "wizardworld.js"
+    ],
+    "styles":[
+        "wizardworld.css"
+    ],
+    "packs": [
+
+    ],
+    "languages": [
+
+    ],
+    "gridDistance": 5,
+    "gridUnits": "ft",
+    "primaryTokenAttribute": "wounds",
+    "initiative": "1d6 + @speed"
+}
