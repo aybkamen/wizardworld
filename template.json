@@ -1,24 +1,150 @@
 {
-    "Actor": {},
+    "Actor": {
+      "types": ["character", "covenant", "npc"],
+      "templates": {
+        "base":{
+          "notes":""
+        }
+      },
+      "character": {
+        "templates": ["base"],
+        "attributes": {
+          "house":"",
+          "age":{
+            "value":0,
+            "clock":0
+          },
+          "style": {
+            "eyes":"",
+            "body":"",
+            "clothes":"",
+            "hair":"",
+            "sigil":""
+          },
+          "beliefs":{
+            "covenant":"",
+            "order":"",
+            "world":""
+          },
+          "warping":0
+        },
+        "stats": {
+          "body": 0,
+          "quick": 0,
+          "mind":0,
+          "spirit":0,
+          "book":0,
+          "orthodox":0
+        },
+        "arts":{
+          "creo":0,
+          "intellego":0,
+          "muto":0,
+          "perdo":0,
+          "rego":0,
+          "animal":0,
+          "aquam":0,
+          "auram":0,
+          "corpus":0,
+          "herbam":0,
+          "imaginem":0,
+          "mentem":0,
+          "terram":0,
+          "vim":0
+        },
+        "covenant":{
+          "name":"",
+          "roles":{
+            "primus":false,
+            "militant":false,
+            "librarian":false,
+            "bursar":false,
+            "liason":false,
+            "vicarius":false
+          },
+          "laboratory":{
+            "description":"",
+            "scriptorium":false,
+            "forge":false,
+            "apothecary":false,
+            "security":"",
+            "notes":""
+          }
+        },
+        "experience":{
+          "value":0,
+          "mark":""
+        },
+        "humors":{
+          "sanguine":{"imbalanced":false, "damaged":false},
+          "phlegmatic":{"imbalanced":false, "damaged":false},
+          "choleric":{"imbalanced":false, "damaged":false},
+          "melancholic":{"imbalanced":false, "damaged":false}
+        },
+        "companion":{
+          "name":"",
+          "profession":"",
+          "competence":1,
+          "notes":"",
+          "harm":0
+        },
+        "familiar":{
+          "name":"",
+          "traits":"",
+          "body":0,
+          "quick":0,
+          "gold":{
+            "value":0,
+            "book":false,
+            "arcane":false
+          },
+          "silver":{
+            "value":0
+          },
+          "bronze":{
+            "value":0
+          },
+          "harm":0
+        }
+      },
+      "npc": {
+        "templates": ["base"],
+        "cr": 0
+      },
+      "covenant":{
+        "templates": ["base"]
+      }
+    },
     "Item": {
-        "types": ["move", "spell"],
-        "templates": {
-            "itemDescription": {
-                "description": ""
-            }
+      "types": ["item", "spell","house_move","advanced_move"],
+      "templates": {
+        "base": {
+          "description": ""
         },
         "move": {
-            "templates": ["itemDescription"],
-            "type": ""
-        },
-        "spell": {
-            "templates":["itemDescription"],
-            "technique": "",
-            "form": "",
-            "target": "",
-            "duration": "",
-            "range": "",
-            "difficultyMod" : 0
+          "tags" : ""
         }
+      },
+      "item": {
+        "templates": ["base"],
+        "quantity": 1,
+        "weight": 0
+      },
+      "spell": {
+        "templates": ["base"],
+        "arts": "",
+        "target": "",
+        "duration": "",
+        "range": "",
+        "magnitude": 0
+      },
+      "house_move" : {
+        "templates": ["base", "move"],
+        "house": ""
+      },
+      "advanced_move": {
+        "templates": ["base", "move"]
+      }
     }
-}
+  }
+  
