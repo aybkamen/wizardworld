@@ -1,22 +1,22 @@
 {
-  "BOILERPLATE.AbilityStr": "Strength",
-  "BOILERPLATE.AbilityCon": "Constitution",
-  "BOILERPLATE.AbilityDex": "Dexterity",
-  "BOILERPLATE.AbilityInt": "Intelligence",
-  "BOILERPLATE.AbilityWis": "Wisdom",
-  "BOILERPLATE.AbilityCha": "Charisma",
+  "WIZWORLD.AbilityStr": "Strength",
+  "WIZWORLD.AbilityCon": "Constitution",
+  "WIZWORLD.AbilityDex": "Dexterity",
+  "WIZWORLD.AbilityInt": "Intelligence",
+  "WIZWORLD.AbilityWis": "Wisdom",
+  "WIZWORLD.AbilityCha": "Charisma",
 
-  "BOILERPLATE.AbilityStrAbbr": "str",
-  "BOILERPLATE.AbilityConAbbr": "con",
-  "BOILERPLATE.AbilityDexAbbr": "dex",
-  "BOILERPLATE.AbilityIntAbbr": "int",
-  "BOILERPLATE.AbilityWisAbbr": "wis",
-  "BOILERPLATE.AbilityChaAbbr": "cha",
+  "WIZWORLD.AbilityStrAbbr": "str",
+  "WIZWORLD.AbilityConAbbr": "con",
+  "WIZWORLD.AbilityDexAbbr": "dex",
+  "WIZWORLD.AbilityIntAbbr": "int",
+  "WIZWORLD.AbilityWisAbbr": "wis",
+  "WIZWORLD.AbilityChaAbbr": "cha",
 
-  "BOILERPLATE.EffectCreate": "Create Effect",
-  "BOILERPLATE.EffectToggle": "Toggle Effect",
-  "BOILERPLATE.EffectEdit": "Edit Effect",
-  "BOILERPLATE.EffectDelete": "Delete Effect",
+  "WIZWORLD.EffectCreate": "Create Effect",
+  "WIZWORLD.EffectToggle": "Toggle Effect",
+  "WIZWORLD.EffectEdit": "Edit Effect",
+  "WIZWORLD.EffectDelete": "Delete Effect",
 
-  "BOILERPLATE.Add": "Add"
+  "WIZWORLD.Add": "Add"
 }

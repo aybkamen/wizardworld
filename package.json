@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "wizworld",
   "version": "1.0.0",
-  "description": "CSS compiler for the Boilerplate system",
+  "description": "CSS compiler for the Wizworld system",
   "scripts": {
     "build": "gulp build",
     "compile": "gulp css",
