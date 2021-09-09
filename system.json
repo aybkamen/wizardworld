@@ -22,7 +22,7 @@
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
   "url": "https://github.com/aybkamen/wizardworld",
-  "manifest": "https://raw.githubusercontent.com/aybkamen/wizardworld/main/system.json?token=AECLJUI3WBTCL37VME2SOBLBHJ3NO",
+  "manifest": "https://raw.githubusercontent.com/aybkamen/wizardworld/main/system.json",
   "download": "https://github.com/aybkamen/wizardworld/archive/refs/heads/main.zip",
   "license": "LICENSE.txt"
 }
