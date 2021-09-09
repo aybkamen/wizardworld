@@ -1,7 +1,7 @@
 {
-  "name": "wizworld",
+  "name": "wizardworld",
   "version": "1.0.0",
-  "description": "CSS compiler for the Wizworld system",
+  "description": "CSS compiler for the wizardworld system",
   "scripts": {
     "build": "gulp build",
     "compile": "gulp css",

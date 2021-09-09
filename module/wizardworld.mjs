@@ -1,12 +1,12 @@
 // Import document classes.
-import { WizworldActor } from "./documents/actor.mjs";
-import { WizworldItem } from "./documents/item.mjs";
+import { wizardworldActor } from "./documents/actor.mjs";
+import { wizardworldItem } from "./documents/item.mjs";
 // Import sheet classes.
-import { WizworldActorSheet } from "./sheets/actor-sheet.mjs";
-import { WizworldItemSheet } from "./sheets/item-sheet.mjs";
+import { wizardworldActorSheet } from "./sheets/actor-sheet.mjs";
+import { wizardworldItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
-import { WIZWORLD } from "./helpers/config.mjs";
+import { wizardworld } from "./helpers/config.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -16,14 +16,14 @@ Hooks.once('init', async function() {
 
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
-  game.wizworld = {
-    WizworldActor,
-    WizworldItem,
+  game.wizardworld = {
+    wizardworldActor,
+    wizardworldItem,
     rollItemMacro
   };
 
   // Add custom constants for configuration.
-  CONFIG.WIZWORLD = WIZWORLD;
+  CONFIG.wizardworld = wizardworld;
 
   /**
    * Set an initiative formula for the system
@@ -35,14 +35,14 @@ Hooks.once('init', async function() {
   };
 
   // Define custom Document classes
-  CONFIG.Actor.documentClass = WizworldActor;
-  CONFIG.Item.documentClass = WizworldItem;
+  CONFIG.Actor.documentClass = wizardworldActor;
+  CONFIG.Item.documentClass = wizardworldItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("wizworld", WizworldActorSheet, { makeDefault: true });
+  Actors.registerSheet("wizardworld", wizardworldActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("wizworld", WizworldItemSheet, { makeDefault: true });
+  Items.registerSheet("wizardworld", wizardworldItemSheet, { makeDefault: true });
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
@@ -93,7 +93,7 @@ async function createItemMacro(data, slot) {
   const item = data.data;
 
   // Create the macro command
-  const command = `game.wizworld.rollItemMacro("${item.name}");`;
+  const command = `game.wizardworld.rollItemMacro("${item.name}");`;
   let macro = game.macros.entities.find(m => (m.name === item.name) && (m.command === command));
   if (!macro) {
     macro = await Macro.create({
@@ -101,7 +101,7 @@ async function createItemMacro(data, slot) {
       type: "script",
       img: item.img,
       command: command,
-      flags: { "wizworld.itemMacro": true }
+      flags: { "wizardworld.itemMacro": true }
     });
   }
   game.user.assignHotbarMacro(macro, slot);

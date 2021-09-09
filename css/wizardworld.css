@@ -223,19 +223,19 @@
   text-align: center;
 }
 
-/* Styles limited to wizworld sheets */
-.wizworld {
+/* Styles limited to wizardworld sheets */
+.wizardworld {
   /* ----------------------------------------- */
   /*  Items Lists                              */
   /* ----------------------------------------- */
-  /* Example style for Wizworld (can be removed if not needed) */
+  /* Example style for wizardworld (can be removed if not needed) */
 }
 
-.wizworld .item-form {
+.wizardworld .item-form {
   font-family: "Roboto", sans-serif;
 }
 
-.wizworld .sheet-header {
+.wizardworld .sheet-header {
   -webkit-box-flex: 0;
   -ms-flex: 0 auto;
   flex: 0 auto;
@@ -255,7 +255,7 @@
   margin-bottom: 10px;
 }
 
-.wizworld .sheet-header .profile-img {
+.wizardworld .sheet-header .profile-img {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100px;
   flex: 0 0 100px;
@@ -263,50 +263,50 @@
   margin-right: 10px;
 }
 
-.wizworld .sheet-header .header-fields {
+.wizardworld .sheet-header .header-fields {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.wizworld .sheet-header h1.charname {
+.wizardworld .sheet-header h1.charname {
   height: 50px;
   padding: 0px;
   margin: 5px 0;
   border-bottom: 0;
 }
 
-.wizworld .sheet-header h1.charname input {
+.wizardworld .sheet-header h1.charname input {
   width: 100%;
   height: 100%;
   margin: 0;
 }
 
-.wizworld .sheet-tabs {
+.wizardworld .sheet-tabs {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
 }
 
-.wizworld .sheet-body,
-.wizworld .sheet-body .tab,
-.wizworld .sheet-body .tab .editor {
+.wizardworld .sheet-body,
+.wizardworld .sheet-body .tab,
+.wizardworld .sheet-body .tab .editor {
   height: 100%;
 }
 
-.wizworld .tox .tox-editor-container {
+.wizardworld .tox .tox-editor-container {
   background: #fff;
 }
 
-.wizworld .tox .tox-edit-area {
+.wizardworld .tox .tox-edit-area {
   padding: 0 8px;
 }
 
-.wizworld .resource-label {
+.wizardworld .resource-label {
   font-weight: bold;
 }
 
-.wizworld .items-header {
+.wizardworld .items-header {
   height: 28px;
   margin: 2px 0;
   padding: 0;
@@ -318,12 +318,12 @@
   font-weight: bold;
 }
 
-.wizworld .items-header > * {
+.wizardworld .items-header > * {
   font-size: 14px;
   text-align: center;
 }
 
-.wizworld .items-header .item-name {
+.wizardworld .items-header .item-name {
   font-weight: bold;
   padding-left: 5px;
   text-align: left;
@@ -332,7 +332,7 @@
   display: flex;
 }
 
-.wizworld .items-list {
+.wizardworld .items-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -341,13 +341,13 @@
   color: #444;
 }
 
-.wizworld .items-list .item-list {
+.wizardworld .items-list .item-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.wizworld .items-list .item-name {
+.wizardworld .items-list .item-name {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
@@ -363,13 +363,13 @@
   display: flex;
 }
 
-.wizworld .items-list .item-name h3, .wizworld .items-list .item-name h4 {
+.wizardworld .items-list .item-name h3, .wizardworld .items-list .item-name h4 {
   margin: 0;
   white-space: nowrap;
   overflow-x: hidden;
 }
 
-.wizworld .items-list .item-controls {
+.wizardworld .items-list .item-controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,13 +381,13 @@
   justify-content: flex-end;
 }
 
-.wizworld .items-list .item-controls a {
+.wizardworld .items-list .item-controls a {
   font-size: 12px;
   text-align: center;
   margin: 0 6px;
 }
 
-.wizworld .items-list .item {
+.wizardworld .items-list .item {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -395,15 +395,15 @@
   border-bottom: 1px solid #c9c7b8;
 }
 
-.wizworld .items-list .item:last-child {
+.wizardworld .items-list .item:last-child {
   border-bottom: none;
 }
 
-.wizworld .items-list .item .item-name {
+.wizardworld .items-list .item .item-name {
   color: #191813;
 }
 
-.wizworld .items-list .item .item-name .item-image {
+.wizardworld .items-list .item .item-name .item-image {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 30px;
   flex: 0 0 30px;
@@ -413,14 +413,14 @@
   margin-right: 5px;
 }
 
-.wizworld .items-list .item-prop {
+.wizardworld .items-list .item-prop {
   text-align: center;
   border-left: 1px solid #c9c7b8;
   border-right: 1px solid #c9c7b8;
   font-size: 12px;
 }
 
-.wizworld .items-list .items-header {
+.wizardworld .items-list .items-header {
   height: 28px;
   margin: 2px 0;
   padding: 0;
@@ -432,32 +432,39 @@
   font-weight: bold;
 }
 
-.wizworld .items-list .items-header > * {
+.wizardworld .items-list .items-header > * {
   font-size: 12px;
   text-align: center;
 }
 
-.wizworld .items-list .items-header .item-name {
+.wizardworld .items-list .items-header .item-name {
   padding-left: 5px;
   text-align: left;
 }
 
-.wizworld .item-formula {
+.wizardworld .item-formula {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 200px;
   flex: 0 0 200px;
   padding: 0 8px;
 }
 
-.wizworld .effects .item .effect-source,
-.wizworld .effects .item .effect-duration,
-.wizworld .effects .item .effect-controls {
+.wizardworld .item-description {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 300px;
+  flex: 0 0 300px;
+  padding: 0 8px;
+}
+
+.wizardworld .effects .item .effect-source,
+.wizardworld .effects .item .effect-duration,
+.wizardworld .effects .item .effect-controls {
   text-align: center;
   border-left: 1px solid #c9c7b8;
   border-right: 1px solid #c9c7b8;
   font-size: 12px;
 }
 
-.wizworld .effects .item .effect-controls {
+.wizardworld .effects .item .effect-controls {
   border: none;
 }

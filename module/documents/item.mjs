@@ -2,7 +2,7 @@
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
  */
-export class WizworldItem extends Item {
+export class wizardworldItem extends Item {
   /**
    * Augment the basic Item data model with additional dynamic data.
    */
@@ -36,7 +36,7 @@ export class WizworldItem extends Item {
     // Initialize chat data.
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
     const rollMode = game.settings.get('core', 'rollMode');
-    const label = `[${item.type}] ${item.name}`;
+    const label = `[${item.type}] <h1> ${item.name} </h1>`;
 
     // If there's no roll data, send a chat message.
     if (!this.data.data.formula) {

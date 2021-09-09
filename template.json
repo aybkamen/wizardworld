@@ -1,150 +1,146 @@
 {
-    "Actor": {
-      "types": ["character", "covenant", "npc"],
-      "templates": {
-        "base":{
-          "notes":""
-        }
-      },
-      "character": {
-        "templates": ["base"],
-        "attributes": {
-          "house":"",
-          "age":{
-            "value":0,
-            "clock":0
-          },
-          "style": {
-            "eyes":"",
-            "body":"",
-            "clothes":"",
-            "hair":"",
-            "sigil":""
-          },
-          "beliefs":{
-            "covenant":"",
-            "order":"",
-            "world":""
-          },
-          "warping":0
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
         },
-        "stats": {
-          "body": 0,
-          "quick": 0,
-          "mind":0,
-          "spirit":0,
-          "book":0,
-          "orthodox":0
+        "power": {
+          "value": 5,
+          "min": 0,
+          "max": 5
         },
-        "arts":{
-          "creo":0,
-          "intellego":0,
-          "muto":0,
-          "perdo":0,
-          "rego":0,
-          "animal":0,
-          "aquam":0,
-          "auram":0,
-          "corpus":0,
-          "herbam":0,
-          "imaginem":0,
-          "mentem":0,
-          "terram":0,
-          "vim":0
-        },
-        "covenant":{
-          "name":"",
-          "roles":{
-            "primus":false,
-            "militant":false,
-            "librarian":false,
-            "bursar":false,
-            "liason":false,
-            "vicarius":false
-          },
-          "laboratory":{
-            "description":"",
-            "scriptorium":false,
-            "forge":false,
-            "apothecary":false,
-            "security":"",
-            "notes":""
-          }
-        },
-        "experience":{
-          "value":0,
-          "mark":""
-        },
-        "humors":{
-          "sanguine":{"imbalanced":false, "damaged":false},
-          "phlegmatic":{"imbalanced":false, "damaged":false},
-          "choleric":{"imbalanced":false, "damaged":false},
-          "melancholic":{"imbalanced":false, "damaged":false}
-        },
-        "companion":{
-          "name":"",
-          "profession":"",
-          "competence":1,
-          "notes":"",
-          "harm":0
-        },
-        "familiar":{
-          "name":"",
-          "traits":"",
-          "body":0,
-          "quick":0,
-          "gold":{
-            "value":0,
-            "book":false,
-            "arcane":false
-          },
-          "silver":{
-            "value":0
-          },
-          "bronze":{
-            "value":0
-          },
-          "harm":0
-        }
-      },
-      "npc": {
-        "templates": ["base"],
-        "cr": 0
-      },
-      "covenant":{
-        "templates": ["base"]
+        "biography": ""
       }
     },
-    "Item": {
-      "types": ["item", "spell","house_move","advanced_move"],
-      "templates": {
-        "base": {
-          "description": ""
+    "character": {
+      "templates": ["base"],
+      "attributes": {
+        "level": {
+          "value": 1
         },
-        "move": {
-          "tags" : ""
+        "armor": {
+          "value": 0
+        },
+        "advancement": "",
+        "origin": "",
+        "career1": "",
+        "career2": ""
+      },
+      "abilities": {
+        "mettle": {
+          "value": 0
+        },
+        "physique": {
+          "value": 0
+        },
+        "expertise": {
+          "value": 0
+        },
+        "influence": {
+          "value": 0
+        },
+        "interface": {
+          "value": 0
         }
       },
-      "item": {
-        "templates": ["base"],
-        "quantity": 1,
-        "weight": 0
-      },
-      "spell": {
-        "templates": ["base"],
-        "arts": "",
-        "target": "",
-        "duration": "",
-        "range": "",
-        "magnitude": 0
-      },
-      "house_move" : {
-        "templates": ["base", "move"],
-        "house": ""
-      },
-      "advanced_move": {
-        "templates": ["base", "move"]
+      "injuries": {
+        "minor": "",
+        "major": "",
+        "severe": "",
+        "critical": "",
+        "fatal": ""
       }
+    },
+    "npc": {
+      "templates": ["base"],
+      "cr": 0
     }
+  },
+  "Item": {
+    "types": ["item", "feature", "spell", "skill", "move","melee","firearm","heavy","explosive","artillery","attire", "mod","vehicle","flyer","crew","beast","kit"],
+    "templates": {
+      "base": {
+        "description": ""
+      },
+      "asset": {
+        "description": "",
+        "type": "",
+        "updates": "",
+        "short": "",
+        "class": 0
+      },
+      "weapon": {
+        "ranges": ""
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0,
+      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+    },
+    "feature": {
+      "templates": ["base"]
+    },
+    "spell": {
+      "templates": ["base"],
+      "spellLevel": 1
+    },
+    "skill": {
+      "templates": ["base"],
+      "short": ""
+    },
+    "move": {
+      "templates": ["base"],
+      "type": "",
+      "short": ""
+    },
+    "melee":{
+      "templates": ["asset", "weapon"]
+    },
+    "firearm":{
+      "templates": ["asset", "weapon"]
+    },
+    "heavy":{
+      "templates": ["asset", "weapon"]
+    },
+    "explosive":{
+      "templates": ["asset", "weapon"]
+    },
+    "artillery":{
+      "templates": ["asset", "weapon"]
+    },
+    "attire":{
+      "templates": ["asset"]
+    },
+     "mod":{
+      "templates": ["asset"],
+      "bodyPart": ""
+    },
+    "vehicle":{
+      "templates": ["asset"],
+      "passengers": ""
+    },
+    "flyer":{
+      "templates": ["asset"],
+      "passengers": ""
+    },
+    "crew":{
+      "templates": ["asset"],
+      "equipment": ""
+    },
+    "beast":{
+      "templates": ["asset"],
+      "weapon": "",
+      "locomotion": ""
+    },
+    "kit":{
+      "templates": ["asset"]
+    }
+
   }
-  
+}

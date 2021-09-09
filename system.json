@@ -1,29 +1,28 @@
 {
-    "name": "wizardworld",
-    "title": "Wizard World",
-    "description": "A PbtA system to play Ars Magica using Wizard World by Jared Hunt.",
-    "author": "Aybkamen",
-    "version": 0.01,
-    "minimumCoreVersion": "0.8.8",
-    "compatibleCoreVersion":"0.8.8",
-    "esmodules": [
-        "wizworld.js"
-    ],
-    "styles":[
-        "wizworld.css"
-    ],
-    "packs": [
-
-    ],
-    "languages": [
-
-    ],
-    "gridDistance": 5,
-    "gridUnits": "ft",
-    "primaryTokenAttribute": "wounds",
-    "initiative": "1d6 + @speed",
-    "url":"https://github.com/aybkamen/wizardworld",
-    "maifest":"https://raw.githubusercontent.com/aybkamen/wizardworld/main/system.json",
-    "download":"https://github.com/aybkamen/wizardworld/archive/refs/heads/main.zip",
-    "license":"LICENSE.txt"
+  "name": "wizardworld",
+  "title": "wizardworld Worlds",
+  "description": "The wizardworld Worlds system for FoundryVTT!",
+  "version": "1.1.0",
+  "minimumCoreVersion": "0.8.3",
+  "compatibleCoreVersion": "0.8.6",
+  "author": "Aybkamen",
+  "esmodules": ["module/wizardworld.mjs"],
+  "styles": ["css/wizardworld.css"],
+  "scripts": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power",
+  "url": "https://github.com/aybkamen/wizardworld",
+  "manifest": "https://raw.githubusercontent.com/aybkamen/wizardworld/main/system.json",
+  "download": "https://github.com/aybkamen/wizardworld/archive/refs/heads/main.zip",
+  "license": "LICENSE.txt"
 }

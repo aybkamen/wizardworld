@@ -1,23 +1,22 @@
-export const WIZWORLD = {};
+export const wizardworld = {};
 
 /**
  * The set of Ability Scores used within the sytem.
  * @type {Object}
  */
- WIZWORLD.abilities = {
-  "str": "WIZWORLD.AbilityStr",
-  "dex": "WIZWORLD.AbilityDex",
-  "con": "WIZWORLD.AbilityCon",
-  "int": "WIZWORLD.AbilityInt",
-  "wis": "WIZWORLD.AbilityWis",
-  "cha": "WIZWORLD.AbilityCha"
+ wizardworld.abilities = {
+  "mettle": "wizardworld.AbilityMettle",
+  "physique": "wizardworld.AbilityPhysique",
+  "expertise": "wizardworld.AbilityExpertise",
+  "influence": "wizardworld.AbilityInfluence",
+  "interface": "wizardworld.AbilityInterface"
 };
 
-WIZWORLD.abilityAbbreviations = {
-  "str": "WIZWORLD.AbilityStrAbbr",
-  "dex": "WIZWORLD.AbilityDexAbbr",
-  "con": "WIZWORLD.AbilityConAbbr",
-  "int": "WIZWORLD.AbilityIntAbbr",
-  "wis": "WIZWORLD.AbilityWisAbbr",
-  "cha": "WIZWORLD.AbilityChaAbbr"
+wizardworld.abilityAbbreviations = {
+  "str": "wizardworld.AbilityStrAbbr",
+  "dex": "wizardworld.AbilityDexAbbr",
+  "con": "wizardworld.AbilityConAbbr",
+  "int": "wizardworld.AbilityIntAbbr",
+  "wis": "wizardworld.AbilityWisAbbr",
+  "cha": "wizardworld.AbilityChaAbbr"
 };

@@ -1,0 +1,73 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1>Explosive</h1>
+      <h2 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h2>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="attributes">Attributes</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="description">
+      {{editor content=data.description target="data.description" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Attributes Tab --}}
+    <div class="tab attributes" data-group="primary" data-tab="attributes">
+      <div>
+        <p><strong>Explosive Design</strong>: Choose one of the following basic designs for a Class 0 Explosive:</p>
+        <ul>
+        <li><strong>Grenade</strong> (One-handed thrown explosive. Optimal Range: Close)
+        <ul>
+        <li><em>Timed:</em> Explodes after fixed time.</li>
+        </ul>
+        </li>
+        <li><strong>Charge</strong> (Two-handed placed explosive. Optimal Range: Melee)
+        <ul>
+        <li><em>Triggered</em>: Explodes when conditions are met (signal, proximity, etc.)</li>
+        <li><em>Destructive</em>: Causes property damage. Damages machinery, vehicles.</li>
+        </ul>
+        </li>
+        <li><strong>Missile</strong>&nbsp; (Launched. Optimal Range: Distant, Very Distant)
+        <ul>
+        <li><em>Massive</em>: Must be dropped from a vehicle or launched from artillery.</li>
+        <li><em>Impact</em>: Explodes when it collides with a solid object.</li>
+        <li><em>Destructive</em>: Causes property damage. Damages machinery, vehicles.</li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+      {{!-- As you add new fields, add them in here! --}}
+      <div class="resource">
+        <label class="resource-label">Class</label>
+        <input type="text" name="data.class" value="{{data.class}}" data-dtype="Number"/>
+      </div>
+      <div class="resource">
+        <label class="resource-label">Type</label>
+        <input type="text" name="data.type" value="{{data.type}}" data-dtype="text"/>
+      </div>
+      <div class="resource">
+        <label class="resource-label">Updates</label>
+        <input type="text" name="data.updates" value="{{data.updates}}" data-dtype="text"/>
+      </div>
+      <div class="resource">
+        <label class="resource-label">Short</label>
+        <input type="text" name="data.short" value="{{data.short}}" data-dtype="text"/>
+      </div>
+      <div class="resource">
+        <label class="resource-label">Range</label>
+        <input type="text" name="data.ranges" value="{{data.ranges}}" data-dtype="text"/>
+      </div>
+      
+    </div>
+  </section>
+</form>

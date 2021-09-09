@@ -7,9 +7,9 @@
   return loadTemplates([
 
     // Actor partials.
-    "systems/wizworld/templates/actor/parts/actor-features.html",
-    "systems/wizworld/templates/actor/parts/actor-items.html",
-    "systems/wizworld/templates/actor/parts/actor-spells.html",
-    "systems/wizworld/templates/actor/parts/actor-effects.html",
+    "systems/wizardworld/templates/actor/parts/actor-skills.html",
+    "systems/wizardworld/templates/actor/parts/actor-items.html",
+    "systems/wizardworld/templates/actor/parts/actor-spells.html",
+    "systems/wizardworld/templates/actor/parts/actor-effects.html",
   ]);
 };

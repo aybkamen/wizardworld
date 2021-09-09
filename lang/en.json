@@ -1,22 +1,21 @@
 {
-  "WIZWORLD.AbilityStr": "Strength",
-  "WIZWORLD.AbilityCon": "Constitution",
-  "WIZWORLD.AbilityDex": "Dexterity",
-  "WIZWORLD.AbilityInt": "Intelligence",
-  "WIZWORLD.AbilityWis": "Wisdom",
-  "WIZWORLD.AbilityCha": "Charisma",
+  "wizardworld.AbilityMettle": "Mettle",
+  "wizardworld.AbilityPhysique": "Physique",
+  "wizardworld.AbilityExpertise": "Expertise",
+  "wizardworld.AbilityInfluence": "Influence",
+  "wizardworld.AbilityInterface": "Interface",
 
-  "WIZWORLD.AbilityStrAbbr": "str",
-  "WIZWORLD.AbilityConAbbr": "con",
-  "WIZWORLD.AbilityDexAbbr": "dex",
-  "WIZWORLD.AbilityIntAbbr": "int",
-  "WIZWORLD.AbilityWisAbbr": "wis",
-  "WIZWORLD.AbilityChaAbbr": "cha",
+  "wizardworld.AbilityStrAbbr": "str",
+  "wizardworld.AbilityConAbbr": "con",
+  "wizardworld.AbilityDexAbbr": "dex",
+  "wizardworld.AbilityIntAbbr": "int",
+  "wizardworld.AbilityWisAbbr": "wis",
+  "wizardworld.AbilityChaAbbr": "cha",
 
-  "WIZWORLD.EffectCreate": "Create Effect",
-  "WIZWORLD.EffectToggle": "Toggle Effect",
-  "WIZWORLD.EffectEdit": "Edit Effect",
-  "WIZWORLD.EffectDelete": "Delete Effect",
+  "wizardworld.EffectCreate": "Create Effect",
+  "wizardworld.EffectToggle": "Toggle Effect",
+  "wizardworld.EffectEdit": "Edit Effect",
+  "wizardworld.EffectDelete": "Delete Effect",
 
-  "WIZWORLD.Add": "Add"
+  "wizardworld.Add": "Add"
 }

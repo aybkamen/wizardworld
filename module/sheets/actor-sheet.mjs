@@ -4,22 +4,22 @@ import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/ef
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class WizworldActorSheet extends ActorSheet {
+export class wizardworldActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["wizworld", "sheet", "actor"],
-      template: "systems/wizworld/templates/actor/actor-sheet.html",
+      classes: ["wizardworld", "sheet", "actor"],
+      template: "systems/wizardworld/templates/actor/actor-sheet.html",
       width: 600,
       height: 600,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
     });
   }
 
   /** @override */
   get template() {
-    return `systems/wizworld/templates/actor/actor-${this.actor.data.type}-sheet.html`;
+    return `systems/wizardworld/templates/actor/actor-${this.actor.data.type}-sheet.html`;
   }
 
   /* -------------------------------------------- */
@@ -69,7 +69,7 @@ export class WizworldActorSheet extends ActorSheet {
   _prepareCharacterData(context) {
     // Handle ability scores.
     for (let [k, v] of Object.entries(context.data.abilities)) {
-      v.label = game.i18n.localize(CONFIG.WIZWORLD.abilities[k]) ?? k;
+      v.label = game.i18n.localize(CONFIG.wizardworld.abilities[k]) ?? k;
     }
   }
 
@@ -82,44 +82,84 @@ export class WizworldActorSheet extends ActorSheet {
    */
   _prepareItems(context) {
     // Initialize containers.
-    const gear = [];
-    const features = [];
-    const spells = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: []
+    const skills = [];
+    const assets = {
+      "melee":[],
+      "firearms":[],
+      "heavy":[],
+      "explosive":[],
+      "attire":[],
+      "mod":[],
+      "vehicle":[],
+      "flyer":[],
+      "crew":[],
+      "beast":[],
+      "kit":[]
     };
+    const weapons = [];
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
-      // Append to gear.
-      if (i.type === 'item') {
-        gear.push(i);
+
+      // Append to skills.
+      if (i.type === 'skill') {
+        skills.push(i);
       }
-      // Append to features.
-      else if (i.type === 'feature') {
-        features.push(i);
+      // Append to melee Weapons
+      else if (i.type === 'melee') {
+        assets["melee"].push(i);
+        weapons.push(i);
       }
-      // Append to spells.
-      else if (i.type === 'spell') {
-        if (i.data.spellLevel != undefined) {
-          spells[i.data.spellLevel].push(i);
-        }
+      // Append to Firearms
+      else if (i.type === 'firearm') {
+        assets["firearms"].push(i);
+        weapons.push(i);
+      }
+      // Append to Heavy Weapons
+      else if (i.type === 'heavy') {
+        assets["heavy"].push(i);
+        weapons.push(i);
+      }
+      // Append to Explosive
+      else if (i.type === 'explosive') {
+        assets["explosive"].push(i);
+        weapons.push(i);
+      }
+      // Append to Attire
+      else if (i.type === 'attire') {
+        assets["attire"].push(i);
+      }
+      // Append to Mod
+      else if (i.type === 'mod') {
+        assets["mod"].push(i);
+      }
+      // Append to Vehicle
+      else if (i.type === 'vehicle') {
+        assets["vehicle"].push(i);
+      }
+      // Append to Flyer
+      else if (i.type === 'flyer') {
+        assets["flyer"].push(i);
+      }
+      // Append to crew
+      else if (i.type === 'crew') {
+        assets["crew"].push(i);
+      }
+      // Append to beast
+      else if (i.type === 'beast') {
+        assets["beast"].push(i);
+      }
+      // Append to kit
+      else if (i.type === 'kit') {
+        assets["kit"].push(i);
       }
     }
 
     // Assign and return
-    context.gear = gear;
-    context.features = features;
-    context.spells = spells;
+    context.skills = skills;
+    context.assets = assets;
+    context.weapons = weapons;
    }
 
   /* -------------------------------------------- */
