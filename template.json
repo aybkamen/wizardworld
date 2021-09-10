@@ -19,40 +19,15 @@
     "character": {
       "templates": ["base"],
       "attributes": {
-        "level": {
-          "value": 1
-        },
-        "armor": {
-          "value": 0
-        },
-        "advancement": "",
-        "origin": "",
-        "career1": "",
-        "career2": ""
+        "house":""
       },
-      "abilities": {
-        "mettle": {
-          "value": 0
-        },
-        "physique": {
-          "value": 0
-        },
-        "expertise": {
-          "value": 0
-        },
-        "influence": {
-          "value": 0
-        },
-        "interface": {
-          "value": 0
-        }
-      },
-      "injuries": {
-        "minor": "",
-        "major": "",
-        "severe": "",
-        "critical": "",
-        "fatal": ""
+      "stats": {
+        "body": {"value":0},
+        "quick":{"value":0},
+        "mind":{"value":0},
+        "spirit":{"value":0},
+        "book":{"value":0},
+        "orthodox":{"value":0}
       }
     },
     "npc": {

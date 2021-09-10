@@ -4,12 +4,13 @@ export const wizardworld = {};
  * The set of Ability Scores used within the sytem.
  * @type {Object}
  */
- wizardworld.abilities = {
-  "mettle": "wizardworld.AbilityMettle",
-  "physique": "wizardworld.AbilityPhysique",
-  "expertise": "wizardworld.AbilityExpertise",
-  "influence": "wizardworld.AbilityInfluence",
-  "interface": "wizardworld.AbilityInterface"
+ wizardworld.stats = {
+  "body": "wizardworld.StatBody",
+  "quick": "wizardworld.StatQuick",
+  "mind": "wizardworld.StatMind",
+  "spirit": "wizardworld.StatSpirit",
+  "book": "wizardworld.StatBook",
+  "orthodox": "wizardworld.StatOrthodox"
 };
 
 wizardworld.abilityAbbreviations = {

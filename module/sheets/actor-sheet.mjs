@@ -67,9 +67,9 @@ export class wizardworldActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterData(context) {
-    // Handle ability scores.
-    for (let [k, v] of Object.entries(context.data.abilities)) {
-      v.label = game.i18n.localize(CONFIG.wizardworld.abilities[k]) ?? k;
+    // Handle stat scores.
+    for (let [k, v] of Object.entries(context.data.stats)) {
+      v.label = game.i18n.localize(CONFIG.wizardworld.stats[k]) ?? k;
     }
   }
 

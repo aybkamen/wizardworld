@@ -1,10 +1,11 @@
 {
-  "wizardworld.AbilityMettle": "Mettle",
-  "wizardworld.AbilityPhysique": "Physique",
-  "wizardworld.AbilityExpertise": "Expertise",
-  "wizardworld.AbilityInfluence": "Influence",
-  "wizardworld.AbilityInterface": "Interface",
-
+  "wizardworld.StatBody": "Body",
+  "wizardworld.StatQuick": "Quick",
+  "wizardworld.StatMind": "Mind",
+  "wizardworld.StatSpirit": "Spirit",
+  "wizardworld.StatBook": "Book",
+  "wizardworld.StatOrthodox": "Orthodox",
+  
   "wizardworld.AbilityStrAbbr": "str",
   "wizardworld.AbilityConAbbr": "con",
   "wizardworld.AbilityDexAbbr": "dex",
