@@ -6,29 +6,23 @@
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
 
-      <!-- <div class="resources grid grid-3col">
+      <div class="resources grid grid-2col">
         <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="data.attributes.origin" value="{{data.attributes.origin}}" placeholder="..Origin"/>
+          <label for="data.attributes.house" class="resource-label">House</label>
+          <input type="text" name="data.attributes.house" value="{{data.attributes.origin}}" placeholder="..House"/>
         </div>
-        <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="data.attributes.career1" value="{{data.attributes.career1}}" placeholder="..Career"/>
-        </div>
-        <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="data.attributes.career2" value="{{data.attributes.career2}}" placeholder="..Career"/>
-        </div>
-      
       </div>
 
-      <div class="resources grid grid-5col">
-        {{#each data.abilities as |ability key|}}
+      <div class="resources grid grid-6col">
+        {{#each data.stats as |stat key|}}
         <div class="resource flex-group-center">
-          <label for="data.abilities.{{key}}.value" class="resource-label rollable" data-roll="2d6+@abilities.{{key}}.value" data-label="{{ability.label}}">{{ability.label}}</label>
+          <label for="data.stats.{{key}}.value" class="resource-label rollable" data-roll="2d6+@abilities.{{key}}.value" data-label="{{stat.label}}">{{stat.label}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+            <input type="text" name="data.stats.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
           </div>
         </div>
         {{/each}}
-      </div> -->
+      </div> 
     </div>
   </header>
 
