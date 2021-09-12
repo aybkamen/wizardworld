@@ -28,7 +28,25 @@
         "spirit":{"value":0},
         "book":{"value":0},
         "orthodox":{"value":0}
-      }
+      },
+      "arts":{
+        "creo": -1,
+        "intellego": -1,
+        "muto": -1,
+        "perdo": -1,
+        "rego": -1,
+        "animal": -1,
+        "aquam": -1,
+        "auram": -1,
+        "corpus": -1,
+        "herbam": -1,
+        "ignem": -1,
+        "imaginem": -1,
+        "mentem": -1,
+        "terram": -1,
+        "vim": -1
+      },
+      "notes":""
     },
     "npc": {
       "templates": ["base"],

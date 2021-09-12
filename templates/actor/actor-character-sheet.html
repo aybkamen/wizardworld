@@ -29,29 +29,126 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="item" data-tab="skills">Skills</a>
-    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="description">Background</a>
+    <a class="item" data-tab="arts">Arts</a>
+    <a class="item" data-tab="spells">Spells</a>
+    <a class="item" data-tab="moves">Moves</a>
+    <a class="item" data-tab="laboratory">Laboratory</a>
+    <a class="item" data-tab="items">Items</a>
+    <a class="item" data-tab="notes">Notes</a>
   </nav>
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
 
-    {{!-- Owned Skills Tab --}}
-    <div class="tab skills" data-group="primary" data-tab="skills">
-      <!-- <section class="grid grid-2col">
+    {{!-- Arts Tab --}}
+    <div class="tab arts" data-group="primary" data-tab="arts">
+      <section class="grid grid-3col">
 
-        <section class="main grid-span-2">
-          {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
-          {{> "systems/wizardworld/templates/actor/parts/actor-skills.html"}}
+        <section class="resources">
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.creo" class="resource-label">Creo</label>
+            <input type="text" name="data.arts.creo" value="{{data.arts.creo}}"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.intellego" class="resource-label">Intellego</label>
+            <input type="text" name="data.arts.intellego" value="{{data.arts.intellego}}"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.muto" class="resource-label">Muto</label>
+            <input type="text" name="data.arts.muto" value="{{data.arts.muto}}"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.perdo" class="resource-label">Perdo</label>
+            <input type="text" name="data.arts.perdo" value="{{data.arts.perdo}}"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.rego" class="resource-label">Rego</label>
+            <input type="text" name="data.arts.rego" value="{{data.arts.rego}}"/>
+          </div>
+          
         </section>
 
-      </section> -->
+        <section class="resources">
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.animal" class="resource-label">Animal</label>
+            <input type="text" name="data.arts.creo" value="{{data.arts.creo}}"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.aquam" class="resource-label">Aquam</label>
+            <input type="text" name="data.arts.aquam" value="{{data.arts.aquam}}"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.auram" class="resource-label">Auram</label>
+            <input type="text" name="data.arts.auram" value="{{data.arts.auram}}"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.corpus" class="resource-label">Corpus</label>
+            <input type="text" name="data.arts.corpus" value="{{data.arts.corpus}}"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.herbam" class="resource-label">Herbam</label>
+            <input type="text" name="data.arts.herbam" value="{{data.arts.herbam}}"/>
+          </div>
+          
+        </section>
+
+        <section class="resources">
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.ignem" class="resource-label">Ignem</label>
+            <input type="text" name="data.arts.ignem" value="{{data.arts.ignem}}"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.imaginem" class="resource-label">Imaginem</label>
+            <input type="text" name="data.arts.imaginem" value="{{data.arts.imaginem}}"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.mentem" class="resource-label">Mentem</label>
+            <input type="text" name="data.arts.mentem" value="{{data.arts.mentem}}"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.terram" class="resource-label">Terram</label>
+            <input type="text" name="data.arts.terram" value="{{data.arts.terram}}"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <label for="data.arts.vim" class="resource-label">Vim</label>
+            <input type="text" name="data.arts.vim" value="{{data.arts.vim}}"/>
+          </div>
+        </section>
+
+      </section>
+    </div>
+
+    {{!-- Spells Tab --}}
+    <div class="tab spells" data-group="primary" data-tab="spells">
+      ..spells..
+    </div>
+
+    {{!-- Moves Tab --}}
+    <div class="tab moves" data-group="primary" data-tab="moves">
+      ..moves..
+    </div>
+
+    {{!-- Laboratory Tab --}}
+    <div class="tab laboratory" data-group="primary" data-tab="laboratory">
+      ..laboratory..
+    </div>
+
+    {{!-- Items Tab --}}
+    <div class="tab items" data-group="primary" data-tab="items">
+      ..items..
     </div>
 
     {{!-- Biography Tab --}}
     <div class="tab biography" data-group="primary" data-tab="description">
       {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
       {{editor content=data.biography target="data.biography" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Notes Tab --}}
+    <div class="tab notes" data-group="primary" data-tab="notes">
+      {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
+      {{editor content=data.notes target="data.notes" rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
   </section>
