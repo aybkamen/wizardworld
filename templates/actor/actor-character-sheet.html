@@ -16,7 +16,7 @@
       <div class="resources grid grid-6col">
         {{#each data.stats as |stat key|}}
         <div class="resource flex-group-center">
-          <label for="data.stats.{{key}}.value" class="resource-label rollable" data-roll="2d6+@abilities.{{key}}.value" data-label="{{stat.label}}">{{stat.label}}</label>
+          <label for="data.stats.{{key}}.value" class="resource-label rollable" data-roll="2d6+@{{key}}.value" data-label="{{stat.label}}">{{stat.label}}</label>
           <div class="resource-content flexrow flex-center flex-between">
             <input type="text" name="data.stats.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
           </div>
@@ -47,23 +47,23 @@
 
         <section class="resources">
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.creo" class="resource-label">Creo</label>
+            <label for="data.arts.creo" class="resource-label rollable" data-roll="2d6+@creo" data-label="Creo">Creo</label>
             <input type="text" name="data.arts.creo" value="{{data.arts.creo}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.intellego" class="resource-label">Intellego</label>
+            <label for="data.arts.intellego" class="resource-label rollable" data-roll="2d6+@intellego" data-label="Intellego">Intellego</label>
             <input type="text" name="data.arts.intellego" value="{{data.arts.intellego}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.muto" class="resource-label">Muto</label>
+            <label for="data.arts.muto" class="resource-label rollable" data-roll="2d6+@muto" data-label="Muto">Muto</label>
             <input type="text" name="data.arts.muto" value="{{data.arts.muto}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.perdo" class="resource-label">Perdo</label>
+            <label for="data.arts.perdo" class="resource-label rollable" data-roll="2d6+@perdo" data-label="Perdo">Perdo</label>
             <input type="text" name="data.arts.perdo" value="{{data.arts.perdo}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.rego" class="resource-label">Rego</label>
+            <label for="data.arts.rego" class="resource-label rollable" data-roll="2d6+@rego" data-label="Rego">Rego</label>
             <input type="text" name="data.arts.rego" value="{{data.arts.rego}}"/>
           </div>
           
@@ -71,23 +71,23 @@
 
         <section class="resources">
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.animal" class="resource-label">Animal</label>
-            <input type="text" name="data.arts.creo" value="{{data.arts.creo}}"/>
+            <label for="data.arts.animal" class="resource-label rollable" data-roll="2d6+@animal" data-label="Animal">Animal</label>
+            <input type="text" name="data.arts.animal" value="{{data.arts.animal}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.aquam" class="resource-label">Aquam</label>
+            <label for="data.arts.aquam" class="resource-label rollable" data-roll="2d6+@aquam" data-label="Aquam">Aquam</label>
             <input type="text" name="data.arts.aquam" value="{{data.arts.aquam}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.auram" class="resource-label">Auram</label>
+            <label for="data.arts.auram" class="resource-label rollable" data-roll="2d6+@auram" data-label="Auram">Auram</label>
             <input type="text" name="data.arts.auram" value="{{data.arts.auram}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.corpus" class="resource-label">Corpus</label>
+            <label for="data.arts.corpus" class="resource-label rollable" data-roll="2d6+@corpus" data-label="Corpus">Corpus</label>
             <input type="text" name="data.arts.corpus" value="{{data.arts.corpus}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.herbam" class="resource-label">Herbam</label>
+            <label for="data.arts.herbam" class="resource-label rollable" data-roll="2d6+@herbam" data-label="Herbam">Herbam</label>
             <input type="text" name="data.arts.herbam" value="{{data.arts.herbam}}"/>
           </div>
           
@@ -95,23 +95,23 @@
 
         <section class="resources">
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.ignem" class="resource-label">Ignem</label>
+            <label for="data.arts.ignem" class="resource-label rollable" data-roll="2d6+@ignem" data-label="Ignem">Ignem</label>
             <input type="text" name="data.arts.ignem" value="{{data.arts.ignem}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.imaginem" class="resource-label">Imaginem</label>
+            <label for="data.arts.imaginem" class="resource-label rollable" data-roll="2d6+@imaginem" data-label="Imaginem">Imaginem</label>
             <input type="text" name="data.arts.imaginem" value="{{data.arts.imaginem}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.mentem" class="resource-label">Mentem</label>
+            <label for="data.arts.mentem" class="resource-label rollable" data-roll="2d6+@mentem" data-label="Mentem">Mentem</label>
             <input type="text" name="data.arts.mentem" value="{{data.arts.mentem}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.terram" class="resource-label">Terram</label>
+            <label for="data.arts.terram" class="resource-label rollable" data-roll="2d6+@terram" data-label="Terram">Terram</label>
             <input type="text" name="data.arts.terram" value="{{data.arts.terram}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.vim" class="resource-label">Vim</label>
+            <label for="data.arts.vim" class="resource-label rollable" data-roll="2d6+@vim" data-label="Vim">Vim</label>
             <input type="text" name="data.arts.vim" value="{{data.arts.vim}}"/>
           </div>
         </section>
