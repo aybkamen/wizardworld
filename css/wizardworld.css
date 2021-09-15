@@ -468,3 +468,10 @@
 .wizardworld .effects .item .effect-controls {
   border: none;
 }
+
+.wizardworld .items-list .enrich-description {
+  text-align: justify;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+}

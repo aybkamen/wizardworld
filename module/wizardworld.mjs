@@ -67,6 +67,10 @@ Handlebars.registerHelper('toLowerCase', function(str) {
   return str.toLowerCase();
 });
 
+Handlebars.registerHelper('enrich', (content) => {
+  return new Handlebars.SafeString(TextEditor.enrichHTML(content));
+});
+
 /* -------------------------------------------- */
 /*  Ready Hook                                  */
 /* -------------------------------------------- */

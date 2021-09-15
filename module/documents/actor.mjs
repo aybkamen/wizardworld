@@ -47,12 +47,6 @@ export class wizardworldActor extends Actor {
 
     // Make modifications to data here. For example:
     const data = actorData.data;
-
-    // Loop through ability scores, and add their modifiers to our sheet output.
-    for (let [key, ability] of Object.entries(data.abilities)) {
-      // Calculate the modifier using d20 rules.
-      ability.mod = Math.floor(ability.value);
-    }
   }
 
   /**
@@ -63,7 +57,6 @@ export class wizardworldActor extends Actor {
 
     // Make modifications to data here. For example:
     const data = actorData.data;
-    data.xp = (data.cr * data.cr) * 100;
   }
 
   /**
@@ -87,16 +80,21 @@ export class wizardworldActor extends Actor {
 
     // Copy the ability scores to the top level, so that rolls can use
     // formulas like `@str.mod + 4`.
-    if (data.abilities) {
-      for (let [k, v] of Object.entries(data.abilities)) {
+    if (data.stats) {
+      for (let [k, v] of Object.entries(data.stats)) {
         data[k] = foundry.utils.deepClone(v);
       }
     }
 
-    // Add level for easier access, or fall back to 0.
-    if (data.attributes.level) {
-      data.lvl = data.attributes.level.value ?? 0;
+    // Copy the art scores to the top level, so that rolls can use
+    // formulas like `@creo + 1`.
+    if (data.arts) {
+      for (let [k, v] of Object.entries(data.arts)) {
+        data[k] = foundry.utils.deepClone(v);
+      }
     }
+
+    
   }
 
   /**

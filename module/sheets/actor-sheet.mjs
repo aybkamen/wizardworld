@@ -41,6 +41,7 @@ export class wizardworldActorSheet extends ActorSheet {
 
     // Prepare character data and items.
     if (actorData.type == 'character') {
+      console.log("jurjur");
       this._prepareItems(context);
       this._prepareCharacterData(context);
     }
@@ -82,84 +83,28 @@ export class wizardworldActorSheet extends ActorSheet {
    */
   _prepareItems(context) {
     // Initialize containers.
-    const skills = [];
-    const assets = {
-      "melee":[],
-      "firearms":[],
-      "heavy":[],
-      "explosive":[],
-      "attire":[],
-      "mod":[],
-      "vehicle":[],
-      "flyer":[],
-      "crew":[],
-      "beast":[],
-      "kit":[]
-    };
-    const weapons = [];
-
+    const housemoves = [];
+    const advancedmoves = [];
+    
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
 
+      // Append to house moves.
+      if (i.type === 'housemove') {
+        housemoves.push(i);
+      }
+
       // Append to skills.
-      if (i.type === 'skill') {
-        skills.push(i);
+      if (i.type === 'advancedmove') {
+        advancedmoves.push(i);
       }
-      // Append to melee Weapons
-      else if (i.type === 'melee') {
-        assets["melee"].push(i);
-        weapons.push(i);
-      }
-      // Append to Firearms
-      else if (i.type === 'firearm') {
-        assets["firearms"].push(i);
-        weapons.push(i);
-      }
-      // Append to Heavy Weapons
-      else if (i.type === 'heavy') {
-        assets["heavy"].push(i);
-        weapons.push(i);
-      }
-      // Append to Explosive
-      else if (i.type === 'explosive') {
-        assets["explosive"].push(i);
-        weapons.push(i);
-      }
-      // Append to Attire
-      else if (i.type === 'attire') {
-        assets["attire"].push(i);
-      }
-      // Append to Mod
-      else if (i.type === 'mod') {
-        assets["mod"].push(i);
-      }
-      // Append to Vehicle
-      else if (i.type === 'vehicle') {
-        assets["vehicle"].push(i);
-      }
-      // Append to Flyer
-      else if (i.type === 'flyer') {
-        assets["flyer"].push(i);
-      }
-      // Append to crew
-      else if (i.type === 'crew') {
-        assets["crew"].push(i);
-      }
-      // Append to beast
-      else if (i.type === 'beast') {
-        assets["beast"].push(i);
-      }
-      // Append to kit
-      else if (i.type === 'kit') {
-        assets["kit"].push(i);
-      }
+    
     }
 
     // Assign and return
-    context.skills = skills;
-    context.assets = assets;
-    context.weapons = weapons;
+    context.housemoves = housemoves;
+    context.advancedmoves = advancedmoves;
    }
 
   /* -------------------------------------------- */
