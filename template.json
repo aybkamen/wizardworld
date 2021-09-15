@@ -54,38 +54,20 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell", "advancedmove", "housemove", "skill", "move","melee","firearm","heavy","explosive","artillery","attire", "mod","vehicle","flyer","crew","beast","kit"],
+    "types": ["advancedmove", "housemove", "spell" ],
     "templates": {
       "base": {
         "description": ""
-      },
-      "asset": {
-        "description": "",
-        "type": "",
-        "updates": "",
-        "short": "",
-        "class": 0
-      },
-      "weapon": {
-        "ranges": ""
       }
-    },
-    "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
-    },
-    "feature": {
-      "templates": ["base"]
     },
     "spell": {
       "templates": ["base"],
-      "spellLevel": 1
-    },
-    "skill": {
-      "templates": ["base"],
-      "short": ""
+      "magnitude": 1,
+      "arts": "",
+      "target": "",
+      "duration": "",
+      "range": "",
+      "effect": ""
     },
     "advancedmove": {
       "templates": ["base"],
@@ -94,54 +76,6 @@
     "housemove": {
       "templates": ["base"],
       "short": ""
-    },
-    "move": {
-      "templates": ["base"],
-      "type": "",
-      "short": ""
-    },
-    "melee":{
-      "templates": ["asset", "weapon"]
-    },
-    "firearm":{
-      "templates": ["asset", "weapon"]
-    },
-    "heavy":{
-      "templates": ["asset", "weapon"]
-    },
-    "explosive":{
-      "templates": ["asset", "weapon"]
-    },
-    "artillery":{
-      "templates": ["asset", "weapon"]
-    },
-    "attire":{
-      "templates": ["asset"]
-    },
-     "mod":{
-      "templates": ["asset"],
-      "bodyPart": ""
-    },
-    "vehicle":{
-      "templates": ["asset"],
-      "passengers": ""
-    },
-    "flyer":{
-      "templates": ["asset"],
-      "passengers": ""
-    },
-    "crew":{
-      "templates": ["asset"],
-      "equipment": ""
-    },
-    "beast":{
-      "templates": ["asset"],
-      "weapon": "",
-      "locomotion": ""
-    },
-    "kit":{
-      "templates": ["asset"]
     }
-
   }
 }
