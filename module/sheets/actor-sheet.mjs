@@ -85,6 +85,7 @@ export class wizardworldActorSheet extends ActorSheet {
     // Initialize containers.
     const housemoves = [];
     const advancedmoves = [];
+    const spells = [];
     
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -95,16 +96,22 @@ export class wizardworldActorSheet extends ActorSheet {
         housemoves.push(i);
       }
 
-      // Append to skills.
+      // Append to advanced moves.
       if (i.type === 'advancedmove') {
         advancedmoves.push(i);
       }
-    
+
+      // Append to spells.
+      if (i.type === 'spell') {
+        spells.push(i);
+      }
+        
     }
 
     // Assign and return
     context.housemoves = housemoves;
     context.advancedmoves = advancedmoves;
+    context.spells = spells;
    }
 
   /* -------------------------------------------- */

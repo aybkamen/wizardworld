@@ -475,3 +475,12 @@
   border-right: 1px solid #c9c7b8;
   font-size: 12px;
 }
+
+.wizardworld .items-list .spell-parameter {
+  text-align: center;
+  font-size: 11px;
+}
+
+.wizardworld .items-list .item {
+  border-bottom: 1px solid #666;
+}

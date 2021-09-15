@@ -8,7 +8,7 @@
 
     // Actor partials.
     "systems/wizardworld/templates/actor/parts/actor-moves.html",
-    "systems/wizardworld/templates/actor/parts/actor-moves.html",
+    "systems/wizardworld/templates/actor/parts/actor-spells.html",
     
     "systems/wizardworld/templates/actor/parts/actor-effects.html",
   ]);
