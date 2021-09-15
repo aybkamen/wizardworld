@@ -46,6 +46,18 @@
         "terram": -1,
         "vim": -1
       },
+      "appearance": {
+        "eyes": "",
+        "body": "",
+        "clothes": "",
+        "hair": "",
+        "sigil": ""        
+      },
+      "beliefs": {
+        "covenant": "",
+        "order": "",
+        "world": ""
+      },
       "notes":""
     },
     "npc": {
