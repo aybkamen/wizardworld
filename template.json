@@ -62,9 +62,17 @@
       },
       "notes":"",
       "bonds": "",
+      "items":"",
       "laboratory": {
         "description": "",
         "covenantrole": ""
+      },
+      "health":{
+        "notes":"",
+        "sanguine":{"imbalanced":false, "damaged":false},
+        "phlegmatic":{"imbalanced":false, "damaged":false},
+        "choleric":{"imbalanced":false, "damaged":false},
+        "melancholic":{"imbalanced":false, "damaged":false}
       }
     },
     "npc": {

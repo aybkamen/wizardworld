@@ -146,17 +146,19 @@
 
     {{!-- Items Tab --}}
     <div class="tab items" data-group="primary" data-tab="items">
-      ..items..
+      {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
+      {{editor content=data.items target="data.items" rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
     {{!-- Bonds Tab --}}
     <div class="tab bonds" data-group="primary" data-tab="bonds">
-      ..Bonds...
+      {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
+      {{editor content=data.bonds target="data.bonds" rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
     {{!-- Health Tab --}}
     <div class="tab health" data-group="primary" data-tab="health">
-      ..Health..
+      {{> "systems/wizardworld/templates/actor/parts/actor-health.html"}}
     </div>
 
     {{!-- Biography Tab --}}
