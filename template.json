@@ -19,7 +19,8 @@
     "character": {
       "templates": ["base"],
       "attributes": {
-        "house":""
+        "house":"",
+        "age": 0
       },
       "stats": {
         "body": {"value":0},
