@@ -60,7 +60,12 @@
         "order": "",
         "world": ""
       },
-      "notes":""
+      "notes":"",
+      "bonds": "",
+      "laboratory": {
+        "description": "",
+        "covenantrole": ""
+      }
     },
     "npc": {
       "templates": ["base"],
