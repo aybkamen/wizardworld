@@ -1,32 +1,38 @@
-<section class="resources">
-  <div class="resource-content flexrow flex-center flex-between">
-    <label for="data.appearance.eyes" class="resource-label" data-label="Eyes">Eyes</label>
-    <input type="text" name="data.appearance.eyes" value="{{data.appearance.eyes}}"/>
+<div class="">
+  <div>
+    <h2>Appearance</h2>
+    <section class="resources">
+      <div class="resource-content flexrow flex-center flex-between">
+        <label for="data.appearance.eyes" class="resource-label width30" data-label="Eyes">Eyes</label>
+        <input type="text" name="data.appearance.eyes" value="{{data.appearance.eyes}}"/>
+      </div>
+      
+      <div class="resource-content flexrow flex-center flex-between">
+        <label for="data.appearance.body" class="resource-label width30" data-label="Body">Body</label>
+        <input type="text" name="data.appearance.body" value="{{data.appearance.body}}"/>
+      </div>
+        
+      <div class="resource-content flexrow flex-center flex-between">
+        <label for="data.appearance.clothes" class="resource-label width30" data-label="Clothes">Clothes</label>
+        <input type="text" name="data.appearance.clothes" value="{{data.appearance.clothes}}"/>
+      </div>
+      
+        
+      <div class="resource-content flexrow flex-center flex-between">
+        <label for="data.appearance.hair" class="resource-label width30" data-label="Hair">Hair</label>
+        <input type="text" name="data.appearance.hair" value="{{data.appearance.hair}}"/>
+      </div>
+      
+        
+      <div class="resource-content flexrow flex-center flex-between">
+        <label for="data.appearance.sigil" class="resource-label width30" data-label="Sigil">Sigil</label>
+        <input type="text" name="data.appearance.sigil" value="{{data.appearance.sigil}}"/>
+      </div>
+      
+    </section>
   </div>
-  
-  <div class="resource-content flexrow flex-center flex-between">
-    <label for="data.appearance.body" class="resource-label" data-label="Body">Body</label>
-    <input type="text" name="data.appearance.body" value="{{data.appearance.body}}"/>
-  </div>
-    
-  <div class="resource-content flexrow flex-center flex-between">
-    <label for="data.appearance.clothes" class="resource-label" data-label="Clothes">Clothes</label>
-    <input type="text" name="data.appearance.clothes" value="{{data.appearance.clothes}}"/>
-  </div>
-  
-    
-  <div class="resource-content flexrow flex-center flex-between">
-    <label for="data.appearance.hair" class="resource-label" data-label="Hair">Hair</label>
-    <input type="text" name="data.appearance.hair" value="{{data.appearance.hair}}"/>
-  </div>
-  
-    
-  <div class="resource-content flexrow flex-center flex-between">
-    <label for="data.appearance.sigil" class="resource-label" data-label="Sigil">Sigil</label>
-    <input type="text" name="data.appearance.sigil" value="{{data.appearance.sigil}}"/>
-  </div>
-  
-</section>
+  <div>
+    <h2>Biography</h2>
 
-{{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
-{{editor content=data.biography target="data.biography" rollData=rollData button=true owner=owner editable=editable}}
+  </div>
+</div>

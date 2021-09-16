@@ -484,3 +484,7 @@
 .wizardworld .items-list .item {
   border-bottom: 1px solid #666;
 }
+
+.wizardworld .width30 {
+  width: 30%;
+}
