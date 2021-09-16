@@ -51,7 +51,9 @@
         "body": "",
         "clothes": "",
         "hair": "",
-        "sigil": ""        
+        "sigil": "",
+        "impronta": "",
+        "sello": ""      
       },
       "beliefs": {
         "covenant": "",
