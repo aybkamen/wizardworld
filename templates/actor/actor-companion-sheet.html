@@ -42,6 +42,23 @@
           {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
           {{editor content=data.special target="data.special" rollData=rollData button=true owner=owner editable=editable}} 
         </div>
+        <div>
+          <h2>Health</h2>
+          <div class="grid grid-3col">
+            <div>
+              <input type="checkbox" name="data.health.healthy" {{checked data.health.healthy}}/>
+              <label for="data.health.healthy">Healthy</label>
+            </div>
+            <div>
+              <input type="checkbox" name="data.health.unhealthy" {{checked data.health.unhealthy}}/>
+              <label for="data.health.unhealthy">Unhealthy</label>
+            </div>
+            <div>
+              <input type="checkbox" name="data.health.down" {{checked data.health.down}}/>
+              <label for="data.health.down">Down</label>
+            </div>
+          </div>
+        </div>    
     </div>
 
     {{!-- Biography Tab --}}

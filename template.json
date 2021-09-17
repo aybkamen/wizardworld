@@ -81,7 +81,14 @@
       "competence": 0,
       "profession": "",
       "special":"",
-      "health": 0
+      "health": {
+        "healthy": true,
+        "unhealthy": false,
+        "down": false
+      }
+    },
+    "covenant": {
+      "templates": ["base"]
     }
   },
   "Item": {
