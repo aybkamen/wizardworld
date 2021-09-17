@@ -6,23 +6,14 @@
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
 
-      <div class="resources grid grid-2col">
-        <div class="resource-content flexrow flex-center flex-between">
-          <label for="data.attributes.house" class="resource-label">House</label>
-          <input type="text" name="data.attributes.house" value="{{data.attributes.house}}" placeholder="..House"/>
-        </div>
-
-        <div class="resource-content flexrow flex-center flex-between">
-          <label for="data.attributes.age" class="resource-label">Age</label>
-          <input type="number" name="data.attributes.age" value="{{data.attributes.age}}" dType="Number"/>
-        </div>
- 
-      </div>
-
-      <div class="resources grid grid-6col">
+      <div class="resources grid grid-4col">
         {{#each data.stats as |stat key|}}
         <div class="resource flex-group-center">
-          <label for="data.stats.{{key}}.value" class="resource-label rollable" data-roll="2d6+@{{key}}.value" data-label="{{stat.label}}">{{stat.label}}</label>
+          <div>
+            <label for="data.stats.{{key}}.value" class="resource-label rollable" data-roll="2d6+@{{key}}.value" data-label="{{stat.label}}">{{stat.label}}</label>
+              <span class="advantage rollable" data-roll="3d6kh2+@{{key}}.value" data-label="{{stat.label}} (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@{{key}}.value" data-label="{{stat.label}} (Disadvantage)">D</span>
+          </div>
           <div class="resource-content flexrow flex-center flex-between">
             <input type="text" name="data.stats.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
           </div>
@@ -55,23 +46,43 @@
 
         <section class="resources">
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.creo" class="resource-label rollable" data-roll="2d6+@creo" data-label="Creo">Creo</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@creo" data-label="creo (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@creo" data-label="creo (Disadvantage)">D</span>
+              <label for="data.arts.creo" class="resource-label rollable" data-roll="2d6+@creo" data-label="Creo">Creo</label>              
+            </div>
             <input type="text" name="data.arts.creo" value="{{data.arts.creo}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.intellego" class="resource-label rollable" data-roll="2d6+@intellego" data-label="Intellego">Intellego</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@intellego" data-label="intellego (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@intellego" data-label="intellego (Disadvantage)">D</span>
+              <label for="data.arts.intellego" class="resource-label rollable" data-roll="2d6+@intellego" data-label="Intellego">Intellego</label>              
+            </div>
             <input type="text" name="data.arts.intellego" value="{{data.arts.intellego}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.muto" class="resource-label rollable" data-roll="2d6+@muto" data-label="Muto">Muto</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@muto" data-label="muto (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@muto" data-label="muto (Disadvantage)">D</span>
+              <label for="data.arts.muto" class="resource-label rollable" data-roll="2d6+@muto" data-label="Muto">Muto</label>              
+            </div>
             <input type="text" name="data.arts.muto" value="{{data.arts.muto}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.perdo" class="resource-label rollable" data-roll="2d6+@perdo" data-label="Perdo">Perdo</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@perdo" data-label="perdo (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@perdo" data-label="perdo (Disadvantage)">D</span>
+              <label for="data.arts.perdo" class="resource-label rollable" data-roll="2d6+@perdo" data-label="Perdo">Perdo</label>              
+            </div>
             <input type="text" name="data.arts.perdo" value="{{data.arts.perdo}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.rego" class="resource-label rollable" data-roll="2d6+@rego" data-label="Rego">Rego</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@rego" data-label="rego (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@rego" data-label="rego (Disadvantage)">D</span>
+              <label for="data.arts.rego" class="resource-label rollable" data-roll="2d6+@rego" data-label="Rego">Rego</label>              
+            </div>
             <input type="text" name="data.arts.rego" value="{{data.arts.rego}}"/>
           </div>
           
@@ -79,23 +90,43 @@
 
         <section class="resources">
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.animal" class="resource-label rollable" data-roll="2d6+@animal" data-label="Animal">Animal</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@animal" data-label="animal (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@animal" data-label="animal (Disadvantage)">D</span>
+              <label for="data.arts.animal" class="resource-label rollable" data-roll="2d6+@animal" data-label="Animal">Animal</label>              
+            </div>
             <input type="text" name="data.arts.animal" value="{{data.arts.animal}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.aquam" class="resource-label rollable" data-roll="2d6+@aquam" data-label="Aquam">Aquam</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@aquam" data-label="aquam (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@aquam" data-label="aquam (Disadvantage)">D</span>
+              <label for="data.arts.aquam" class="resource-label rollable" data-roll="2d6+@aquam" data-label="Aquam">Aquam</label>              
+            </div>
             <input type="text" name="data.arts.aquam" value="{{data.arts.aquam}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.auram" class="resource-label rollable" data-roll="2d6+@auram" data-label="Auram">Auram</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@auram" data-label="auram (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@auram" data-label="auram (Disadvantage)">D</span>
+              <label for="data.arts.auram" class="resource-label rollable" data-roll="2d6+@auram" data-label="Auram">Auram</label>              
+            </div>
             <input type="text" name="data.arts.auram" value="{{data.arts.auram}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.corpus" class="resource-label rollable" data-roll="2d6+@corpus" data-label="Corpus">Corpus</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@corpus" data-label="corpus (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@corpus" data-label="corpus (Disadvantage)">D</span>
+              <label for="data.arts.corpus" class="resource-label rollable" data-roll="2d6+@corpus" data-label="Corpus">Corpus</label>              
+            </div>
             <input type="text" name="data.arts.corpus" value="{{data.arts.corpus}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.herbam" class="resource-label rollable" data-roll="2d6+@herbam" data-label="Herbam">Herbam</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@herbam" data-label="herbam (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@herbam" data-label="herbam (Disadvantage)">D</span>
+              <label for="data.arts.herbam" class="resource-label rollable" data-roll="2d6+@herbam" data-label="Herbam">Herbam</label>              
+            </div>
             <input type="text" name="data.arts.herbam" value="{{data.arts.herbam}}"/>
           </div>
           
@@ -103,23 +134,43 @@
 
         <section class="resources">
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.ignem" class="resource-label rollable" data-roll="2d6+@ignem" data-label="Ignem">Ignem</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@ignem" data-label="ignem (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@ignem" data-label="ignem (Disadvantage)">D</span>
+              <label for="data.arts.ignem" class="resource-label rollable" data-roll="2d6+@ignem" data-label="Ignem">Ignem</label>              
+            </div>
             <input type="text" name="data.arts.ignem" value="{{data.arts.ignem}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.imaginem" class="resource-label rollable" data-roll="2d6+@imaginem" data-label="Imaginem">Imaginem</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@imaginem" data-label="imaginem (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@imaginem" data-label="imaginem (Disadvantage)">D</span>
+              <label for="data.arts.imaginem" class="resource-label rollable" data-roll="2d6+@imaginem" data-label="Imaginem">Imaginem</label>              
+            </div>
             <input type="text" name="data.arts.imaginem" value="{{data.arts.imaginem}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.mentem" class="resource-label rollable" data-roll="2d6+@mentem" data-label="Mentem">Mentem</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@mentem" data-label="mentem (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@mentem" data-label="mentem (Disadvantage)">D</span>
+              <label for="data.arts.mentem" class="resource-label rollable" data-roll="2d6+@mentem" data-label="Mentem">Mentem</label>              
+            </div>
             <input type="text" name="data.arts.mentem" value="{{data.arts.mentem}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.terram" class="resource-label rollable" data-roll="2d6+@terram" data-label="Terram">Terram</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@terram" data-label="terram (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@terram" data-label="terram (Disadvantage)">D</span>
+              <label for="data.arts.terram" class="resource-label rollable" data-roll="2d6+@terram" data-label="Terram">Terram</label>              
+            </div>
             <input type="text" name="data.arts.terram" value="{{data.arts.terram}}"/>
           </div>
           <div class="resource-content flexrow flex-center flex-between">
-            <label for="data.arts.vim" class="resource-label rollable" data-roll="2d6+@vim" data-label="Vim">Vim</label>
+            <div>
+              <span class="advantage rollable" data-roll="3d6kh2+@vim" data-label="vim (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@vim" data-label="vim (Disadvantage)">D</span>
+              <label for="data.arts.vim" class="resource-label rollable" data-roll="2d6+@vim" data-label="Vim">Vim</label>              
+            </div>
             <input type="text" name="data.arts.vim" value="{{data.arts.vim}}"/>
           </div>
         </section>

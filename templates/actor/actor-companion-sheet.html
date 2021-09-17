@@ -20,7 +20,20 @@
 
     {{!-- Description Tab --}}
     <div class="tab biography" data-group="primary" data-tab="description">
-      ...Description...
+      <section class="grid grid-3col">
+
+          <section class="resources">
+            <div class="resource-content flexrow flex-center flex-between">
+              <label for="data.competence" class="resource-label rollable" data-roll="2d6+@competence" data-label="Competence">Competence</label>
+              <input type="text" name="data.competence" value="{{data.competence}}"/>
+              <div>
+                <div class="advantage rollable" data-roll="3d6kh2+@competence" data-label="Competence (Advantage)">Adv</div>
+                <div class="disadvantage rollable" data-roll="3d6kl2+@competence" data-label="Competence (Disadvantage)">Dis</div>
+              </div>
+            </div>            
+          </section>
+        </section>
+
     </div>
 
     {{!-- Biography Tab --}}

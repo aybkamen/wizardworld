@@ -10,6 +10,11 @@
   cursor: pointer;
 }
 
+.advantage, .disadvantage {
+  font-size: xx-small;
+  color: #66a;
+}
+
 .grid,
 .grid-2col {
   display: grid;

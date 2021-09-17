@@ -41,7 +41,6 @@ export class wizardworldActorSheet extends ActorSheet {
 
     // Prepare character data and items.
     if (actorData.type == 'character') {
-      console.log("jurjur");
       this._prepareItems(context);
       this._prepareCharacterData(context);
     }
