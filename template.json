@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
+    "types": ["character", "companion"],
     "templates": {
       "base": {
         "health": {
@@ -76,9 +76,12 @@
         "melancholic":{"imbalanced":false, "damaged":false}
       }
     },
-    "npc": {
+    "companion": {
       "templates": ["base"],
-      "cr": 0
+      "competence": 0,
+      "profession": "",
+      "special":"",
+      "health": 0
     }
   },
   "Item": {

@@ -33,10 +33,10 @@ export class wizardworldActor extends Actor {
     const data = actorData.data;
     const flags = actorData.flags.wizardworld || {};
 
-    // Make separate methods for each Actor type (character, npc, etc.) to keep
+    // Make separate methods for each Actor type (character, companion, etc.) to keep
     // things organized.
     this._prepareCharacterData(actorData);
-    this._prepareNpcData(actorData);
+    this._prepareCompanioncData(actorData);
   }
 
   /**
@@ -50,10 +50,10 @@ export class wizardworldActor extends Actor {
   }
 
   /**
-   * Prepare NPC type specific data.
+   * Prepare Companion type specific data.
    */
-  _prepareNpcData(actorData) {
-    if (actorData.type !== 'npc') return;
+  _prepareCompanionData(actorData) {
+    if (actorData.type !== 'companion') return;
 
     // Make modifications to data here. For example:
     const data = actorData.data;
@@ -67,7 +67,7 @@ export class wizardworldActor extends Actor {
 
     // Prepare character roll data.
     this._getCharacterRollData(data);
-    this._getNpcRollData(data);
+    this._getCompanionRollData(data);
 
     return data;
   }
@@ -98,12 +98,12 @@ export class wizardworldActor extends Actor {
   }
 
   /**
-   * Prepare NPC roll data.
+   * Prepare Companion roll data.
    */
-  _getNpcRollData(data) {
-    if (this.data.type !== 'npc') return;
+  _getCompanionRollData(data) {
+    if (this.data.type !== 'companion') return;
 
-    // Process additional NPC data here.
+    // Process additional Companion data here.
   }
 
 }

@@ -46,8 +46,8 @@ export class wizardworldActorSheet extends ActorSheet {
       this._prepareCharacterData(context);
     }
 
-    // Prepare NPC data and items.
-    if (actorData.type == 'npc') {
+    // Prepare Companion data and items.
+    if (actorData.type == 'companion') {
       this._prepareItems(context);
     }
 
