@@ -163,6 +163,10 @@
   grid-column-end: span 12;
 }
 
+.grid-rowspan-2 {
+  grid-row-end: span 2;
+}
+
 .flex-group-center,
 .flex-group-left,
 .flex-group-right {
@@ -512,3 +516,17 @@
 .grid-library div, .grid-library label {
   border-bottom: 1px solid #666;
 }
+
+.grid-resources input[type="checkbox"] {
+  height: 0.8em;
+}
+
+.grid-resources input[type="text"] {
+  height: 1.3em;
+  font-size: 0.8em;
+}
+
+label.small-label {
+  font-size: 0.7em;
+}
+

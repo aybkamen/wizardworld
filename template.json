@@ -122,16 +122,14 @@
       },
       "attributes":{
         "covenfolk":{"size":0, "tiny":false, "small":false, "medium":false, "large":false},
-        "warband":{"size":0, "tiny":false, "small":false, "medium":false, "large":false},
+        "warband":{"size":0, "tiny":false, "small":false, "medium":false, "large":false, "harm":"","armour":""},
         "income":{"deficient":false, "stable":false, "abundant":false},
-        "tags":{
-          "surplus":"",
-          "vulnerabilities":"",
-          "fortifications":"",
-          "buildings":"",
-          "relations":"",
-          "location":""
-        }
+        "surplus":"",
+        "vulnerabilities":"",
+        "fortifications":"",
+        "buildings":"",
+        "relations":"",
+        "location":""
       },
       "magi":{
         "primus": "",

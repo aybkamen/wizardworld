@@ -33,6 +33,7 @@
     <a class="item" data-tab="library">Library</a>
     <a class="item" data-tab="attributes">Attributes</a>
     <a class="item" data-tab="magi">Magi</a>
+    <a class="item" data-tab="covenfolk">Covenfolk</a>
     <a class="item" data-tab="resources">Resources</a>
     <a class="item" data-tab="notes">Notes</a>
   </nav>
@@ -59,7 +60,12 @@
 
     {{!-- Attributes Tab --}}
     <div class="tab attributes" data-group="primary" data-tab="attributes">
-      ..attributes
+      {{> "systems/wizardworld/templates/actor/parts/covenant-attributes.html"}}
+    </div>
+
+    {{!-- Covenfolk Tab --}}
+    <div class="tab attributes" data-group="primary" data-tab="covenfolk">
+      {{> "systems/wizardworld/templates/actor/parts/covenant-covenfolk.html"}}
     </div>
 
     {{!-- Magi Tab --}}
