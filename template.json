@@ -95,9 +95,10 @@
         "fortune": {"value":0},
         "social": {"value":0}
       },
-      "totals": {
+      "resources": {
         "vis": 0,
-        "warping": 0
+        "warping": 0,
+        "special": ""
       },
       "library": {
         "arts":{
@@ -123,12 +124,14 @@
         "covenfolk":{"size":0, "tiny":false, "small":false, "medium":false, "large":false},
         "warband":{"size":0, "tiny":false, "small":false, "medium":false, "large":false},
         "income":{"deficient":false, "stable":false, "abundant":false},
-        "surplus":"",
-        "vulnerabilities":"",
-        "fortifications":"",
-        "buildings":"",
-        "relations":"",
-        "location":""
+        "tags":{
+          "surplus":"",
+          "vulnerabilities":"",
+          "fortifications":"",
+          "buildings":"",
+          "relations":"",
+          "location":""
+        }
       },
       "magi":{
         "primus": "",

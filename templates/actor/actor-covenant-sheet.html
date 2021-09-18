@@ -64,12 +64,32 @@
 
     {{!-- Magi Tab --}}
     <div class="tab magi" data-group="primary" data-tab="magi">
-      ...magi
+      <div class="resources grid grid-4col">
+        {{#each data.magi as |magi key|}}
+        <label for="data.magi.{{key}}" class="resource-label capitalize" >{{key}}</label>
+        <input class="grid-span-3" type="text" name="data.magi.{{key}}" value="{{magi}}"/>
+        {{/each}}
+      </div> 
     </div>
 
     {{!-- Resources Tab --}}
     <div class="tab resources" data-group="primary" data-tab="resources">
-      ...resources
+      <h2>Totals</h2>
+      <section class="resources  grid grid-5col">
+          <label for="data.resources.vis" class="resource-label" data-label="Vis">Vis</label>
+          <input type="number" min="0" name="data.resources.vis" value="{{data.resources.vis}}"/>
+        
+          <div></div>
+
+          <label for="data.resources.warping" class="resource-label" data-label="Warping">Warping</label>
+          <input type="number" min="0" name="data.resources.warping" value="{{data.resources.warping}}"/>
+      </section>
+
+      <h2>Specials</h2>
+      <div style="height: 300px;">
+        {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
+        {{editor content=data.resources.special target="data.resources.special" rollData=rollData button=true owner=owner editable=editable}}
+      </div>
     </div>
 
 
