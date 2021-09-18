@@ -493,3 +493,22 @@
 .wizardworld .width30 {
   width: 30%;
 }
+
+.grid-library {
+  grid-column: span 4 / span 4;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  row-gap: 1px;
+  column-gap: 0px;
+}
+
+.grid-library label {
+  text-transform: capitalize;
+}
+
+.grid-library input {
+  height: 0.8em;
+}
+
+.grid-library div, .grid-library label {
+  border-bottom: 1px solid #666;
+}

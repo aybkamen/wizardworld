@@ -5,13 +5,36 @@
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+
+
+      <div class="resources grid grid-4col">
+        {{#each data.stats as |stat key|}}
+        <div class="resource flex-group-center">
+          <div>
+            <label for="data.stats.{{key}}.value" class="resource-label rollable" data-roll="2d6+@stats.{{key}}.value" data-label="{{key}}">{{key}}</label>
+              <span class="advantage rollable" data-roll="3d6kh2+@stats.{{key}}.value" data-label="{{key}} (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@stats.{{key}}.value" data-label="{{key}} (Disadvantage)">D</span>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="data.stats.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
+          </div>
+        </div>
+        {{/each}}
+      </div> 
     </div>
+
+
   </header>
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
     <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="library">Library</a>
+    <a class="item" data-tab="attributes">Attributes</a>
+    <a class="item" data-tab="magi">Magi</a>
+    <a class="item" data-tab="resources">Resources</a>
+    <a class="item" data-tab="notes">Notes</a>
   </nav>
 
   {{!-- Sheet Body --}}
@@ -21,6 +44,32 @@
     <div class="tab biography" data-group="primary" data-tab="description">
       {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
       {{editor content=data.description target="data.description" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Notes Tab --}}
+    <div class="tab notes" data-group="primary" data-tab="notes">
+      {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
+      {{editor content=data.notes target="data.notes" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Library Tab --}}
+    <div class="tab library" data-group="primary" data-tab="library">
+      {{> "systems/wizardworld/templates/actor/parts/covenant-library.html"}}
+    </div>
+
+    {{!-- Attributes Tab --}}
+    <div class="tab attributes" data-group="primary" data-tab="attributes">
+      ..attributes
+    </div>
+
+    {{!-- Magi Tab --}}
+    <div class="tab magi" data-group="primary" data-tab="magi">
+      ...magi
+    </div>
+
+    {{!-- Resources Tab --}}
+    <div class="tab resources" data-group="primary" data-tab="resources">
+      ...resources
     </div>
 
 

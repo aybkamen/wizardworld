@@ -1,0 +1,22 @@
+<div class="resources grid grid-2col">
+
+  <section>
+    <div class="resource grid grid-library">
+      <div></div>
+      <label class="resource-label">Basic</label>
+      <label class="resource-label">Adv.</label>
+      <label class="resource-label">Complete</label>
+      {{#each data.library.arts as |art key|}}
+      <label class="resource-label">{{key}}</label>
+      <div><input type="checkbox" name="data.library.arts.{{key}}.advanced" {{checked art.advanced}} /></div>
+      <div><input type="checkbox" name="data.library.arts.{{key}}.complete" {{checked art.complete}} /></div>
+      <div><input type="checkbox" name="data.library.arts.{{key}}.basic" {{checked art.basic}} /></div>
+      {{/each}}
+    </div>
+  </section>
+    
+  <div>
+    {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
+    {{editor content=data.library.description target="data.library.description" rollData=rollData button=true owner=owner editable=editable}}
+  </div>
+</div> 
