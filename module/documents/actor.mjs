@@ -37,6 +37,7 @@ export class wizardworldActor extends Actor {
     // things organized.
     this._prepareCharacterData(actorData);
     this._prepareCompanioncData(actorData);
+    this._prepareCovenantData(actorData);
   }
 
   /**
@@ -52,8 +53,18 @@ export class wizardworldActor extends Actor {
   /**
    * Prepare Companion type specific data.
    */
-  _prepareCompanionData(actorData) {
+   _prepareCompanionData(actorData) {
     if (actorData.type !== 'companion') return;
+
+    // Make modifications to data here. For example:
+    const data = actorData.data;
+  }
+
+  /**
+   * Prepare Covenant type specific data.
+   */
+   _prepareCovenantData(actorData) {
+    if (actorData.type !== 'covenant') return;
 
     // Make modifications to data here. For example:
     const data = actorData.data;

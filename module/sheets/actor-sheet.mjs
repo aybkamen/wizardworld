@@ -50,6 +50,11 @@ export class wizardworldActorSheet extends ActorSheet {
       this._prepareItems(context);
     }
 
+    // Prepare Covenant data and items.
+    if (actorData.type == 'covenant') {
+      this._prepareItems(context);
+    }
+
     // Add roll data for TinyMCE editors.
     context.rollData = context.actor.getRollData();
 

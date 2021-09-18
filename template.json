@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "companion"],
+    "types": ["character", "companion", "covenant"],
     "templates": {
       "base": {
         "health": {
