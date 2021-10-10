@@ -1,8 +1,8 @@
 {
   "name": "wizardworld",
-  "title": "wizardworld Worlds",
+  "title": "Wizardworld - Ars Magica PbtA",
   "description": "The wizardworld Worlds system for FoundryVTT!",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "minimumCoreVersion": "0.8.3",
   "compatibleCoreVersion": "0.8.6",
   "author": "Aybkamen",
