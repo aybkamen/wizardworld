@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "companion", "covenant"],
+    "types": ["character", "companion", "covenant", "npc"],
     "templates": {
       "base": {
         "health": {
@@ -141,10 +141,23 @@
       },
       "notes":""
       
+    },
+    "npc": {
+      "templates":["base"],
+      "harm": {
+        "threshold":0,
+        "value":0
+      },
+      "certamen": {
+        "threshold":0,
+        "value":0
+      },
+      "front":"",
+      "biography":""
     }
   },
   "Item": {
-    "types": ["advancedmove", "housemove", "spell" ],
+    "types": ["advancedmove", "housemove", "spell", "magicitem" ],
     "templates": {
       "base": {
         "description": ""
@@ -166,6 +179,9 @@
     "housemove": {
       "templates": ["base"],
       "short": ""
+    },
+    "magicitem": {
+      "templates": ["base"]
     }
   }
 }

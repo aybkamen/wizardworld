@@ -55,6 +55,11 @@ export class wizardworldActorSheet extends ActorSheet {
       this._prepareItems(context);
     }
 
+    // Prepare Npc data and items.
+    if (actorData.type == 'npc') {
+      this._prepareItems(context);
+    }
+
     // Add roll data for TinyMCE editors.
     context.rollData = context.actor.getRollData();
 
@@ -90,6 +95,7 @@ export class wizardworldActorSheet extends ActorSheet {
     const housemoves = [];
     const advancedmoves = [];
     const spells = [];
+    const items = [];
     
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -110,12 +116,18 @@ export class wizardworldActorSheet extends ActorSheet {
         spells.push(i);
       }
         
+      // Append to items.
+      if (i.type === 'magicitems') {
+        items.push(i);
+      }
+        
     }
 
     // Assign and return
     context.housemoves = housemoves;
     context.advancedmoves = advancedmoves;
     context.spells = spells;
+    context.items = items;
    }
 
   /* -------------------------------------------- */

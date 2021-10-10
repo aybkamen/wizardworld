@@ -36,7 +36,7 @@ export class wizardworldActor extends Actor {
     // Make separate methods for each Actor type (character, companion, etc.) to keep
     // things organized.
     this._prepareCharacterData(actorData);
-    this._prepareCompanioncData(actorData);
+    this._prepareCompanionData(actorData);
     this._prepareCovenantData(actorData);
   }
 
