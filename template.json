@@ -89,10 +89,12 @@
       "competence": 0,
       "profession": "",
       "special":"",
-      "health": {
-        "healthy": true,
-        "unhealthy": false,
-        "down": false
+      "health":{
+        "notes":"",
+        "sanguine":{"imbalanced":false, "damaged":false},
+        "phlegmatic":{"imbalanced":false, "damaged":false},
+        "choleric":{"imbalanced":false, "damaged":false},
+        "melancholic":{"imbalanced":false, "damaged":false}
       }
     },
     "covenant": {

@@ -7,15 +7,7 @@
         <input type="checkbox" name="data.health.sanguine.imbalanced" {{checked data.health.sanguine.imbalanced}} />
         <span>Imbalanced</span>
         <input type="checkbox" name="data.health.sanguine.damaged" {{checked data.health.sanguine.damaged}} />
-        <span>Weak</span>
-      </div>
-
-      <div class="resource-content flexrow flex-center flex-between">
-        <label class="resource-label">Phlegmatic: </label>
-        <input type="checkbox" name="data.health.phlegmatic.imbalanced" {{checked data.health.phlegmatic.imbalanced}} />
-        <span>Imbalanced</span>
-        <input type="checkbox" name="data.health.phlegmatic.damaged" {{checked data.health.phlegmatic.damaged}} />
-        <span>Weak</span>
+        <span>Weak (-1 Body)</span>
       </div>
 
       <div class="resource-content flexrow flex-center flex-between">
@@ -23,7 +15,7 @@
         <input type="checkbox" name="data.health.choleric.imbalanced" {{checked data.health.choleric.imbalanced}} />
         <span>Imbalanced</span>
         <input type="checkbox" name="data.health.choleric.damaged" {{checked data.health.choleric.damaged}} />
-        <span>Weak</span>
+        <span>Addled (-1 Mind)</span>
       </div>
 
       <div class="resource-content flexrow flex-center flex-between">
@@ -31,9 +23,17 @@
         <input type="checkbox" name="data.health.melancholic.imbalanced" {{checked data.health.melancholic.imbalanced}} />
         <span>Imbalanced</span>
         <input type="checkbox" name="data.health.melancholic.damaged" {{checked data.health.melancholic.damaged}} />
-        <span>Weak</span>
+        <span>Grieved (-1 Spirit)</span>
       </div>
       
+      <div class="resource-content flexrow flex-center flex-between">
+        <label class="resource-label">Phlegmatic: </label>
+        <input type="checkbox" name="data.health.phlegmatic.imbalanced" {{checked data.health.phlegmatic.imbalanced}} />
+        <span>Imbalanced</span>
+        <input type="checkbox" name="data.health.phlegmatic.damaged" {{checked data.health.phlegmatic.damaged}} />
+        <span>Lethargic (-1 Quick)</span>
+      </div>
+
     </section>
   </div>
   <div style="height: 200px;">
