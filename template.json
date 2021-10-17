@@ -79,6 +79,13 @@
     },
     "companion": {
       "templates": ["base"],
+      "stats": {
+        "body": {"value":0},
+        "quick":{"value":0},
+        "mind":{"value":0},
+        "spirit":{"value":0},
+        "fortune":{"value":0}
+      },
       "competence": 0,
       "profession": "",
       "special":"",
