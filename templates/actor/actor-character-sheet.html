@@ -185,7 +185,13 @@
 
     {{!-- Moves Tab --}}
     <div class="tab moves" data-group="primary" data-tab="moves">
-      {{> "systems/wizardworld/templates/actor/parts/actor-moves.html"}}
+      <div class="resources grid grid-6col">
+        <label for="data.experience">Experience</label>
+        <input type="text" name="data.experience" value="{{data.experience}}" data-dtype="Number"/>          
+      </div>
+      <div>
+        {{> "systems/wizardworld/templates/actor/parts/actor-moves.html"}}
+      </div>
     </div>
 
     {{!-- Laboratory Tab --}}
