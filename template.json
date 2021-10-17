@@ -95,7 +95,8 @@
         "phlegmatic":{"imbalanced":false, "damaged":false},
         "choleric":{"imbalanced":false, "damaged":false},
         "melancholic":{"imbalanced":false, "damaged":false}
-      }
+      },
+      "equipment":""
     },
     "covenant": {
       "templates": ["base"],
