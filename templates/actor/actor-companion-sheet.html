@@ -5,6 +5,27 @@
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+
+      <div class="resources grid grid-4col">
+        {{#each data.stats as |stat key|}}
+        <div class="resource flex-group-center">
+          <div>
+            <label for="data.stats.{{key}}.value" class="resource-label rollable" data-roll="2d6+@{{key}}.value" data-label="{{key}}">{{key}}</label>
+              <span class="advantage rollable" data-roll="3d6kh2+@{{key}}.value" data-label="{{stat.label}} (Advantage)">A</span> 
+              <span class="disadvantage rollable" data-roll="3d6kl2+@{{key}}.value" data-label="{{stat.label}} (Disadvantage)">D</span>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="data.stats.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
+          </div>
+        </div>
+        {{/each}}
+
+        <div class="resource flex-group-center grid-span-3">
+          <label for="data.profession" class="resource-label">Background</label>
+          <input class="grid-span-5" type="text" name="data.profession" value="{{data.profession}}"/>
+        </div>
+      </div>
+
     </div>
   </header>
 
@@ -12,7 +33,7 @@
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
     <a class="item" data-tab="description">Description</a>
-    <a class="item" data-tab="advances">Advances</a>
+    <a class="item" data-tab="moves">Moves</a>
     <a class="item" data-tab="biography">Biography</a>
   </nav>
 
@@ -21,7 +42,7 @@
 
     {{!-- Description Tab --}}
     <div class="tab biography" data-group="primary" data-tab="description">
-      <section class="grid grid-2col">
+      <!-- <section class="grid grid-2col">
           <section class="resources">
             <div class="resource-content flexrow flex-center flex-between">
               <div>
@@ -42,11 +63,8 @@
               </div>          
             </div>            
           </section>
-        </section>
-        <section class="grid grid-6col">
-            <label for="data.profession" class="resource-label">Background</label>
-            <input class="grid-span-5" type="text" name="data.profession" value="{{data.profession}}"/>
-        </section>
+        </section> -->
+
         <div style="height: 200px;">
           <h2>Special</h2>
           {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
@@ -78,10 +96,14 @@
     </div>
 
 
-    <div class="tab advances" data-group="primary" data-tab="Advances">
+    {{!-- Moves Tab --}}
+    <div class="tab moves" data-group="primary" data-tab="moves">
       <div class="resources grid grid-6col">
         <label for="data.experience">Experience</label>
         <input type="text" name="data.experience" value="{{data.experience}}" data-dtype="Number"/>          
+      </div>
+      <div>
+        {{> "systems/wizardworld/templates/actor/parts/actor-moves.html"}}
       </div>
     </div>
 
