@@ -135,6 +135,7 @@
         "covenfolk":{"size":0, "tiny":false, "small":false, "medium":false, "large":false},
         "warband":{"size":0, "tiny":false, "small":false, "medium":false, "large":false, "harm":"","armour":""},
         "income":{"deficient":false, "stable":false, "abundant":false},
+        "description": "",
         "surplus":"",
         "vulnerabilities":"",
         "fortifications":"",
@@ -168,7 +169,7 @@
     }
   },
   "Item": {
-    "types": ["advancedmove", "housemove", "spell", "magicitem" ],
+    "types": ["advancedmove", "housemove", "spell", "specialitem" ],
     "templates": {
       "base": {
         "description": ""
@@ -191,8 +192,9 @@
       "templates": ["base"],
       "short": ""
     },
-    "magicitem": {
-      "templates": ["base"]
+    "specialitem": {
+      "templates": ["base"],
+      "details": ""
     }
   }
 }

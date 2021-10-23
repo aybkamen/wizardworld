@@ -61,9 +61,8 @@
 
     {{!-- Equipment Tab --}}
     <div class="tab equipment" data-group="primary" data-tab="equipment">
-      {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
-      {{editor content=data.equipment target="data.equipment" rollData=rollData button=true owner=owner editable=editable}}
-    </div>    
+      {{> "systems/wizardworld/templates/actor/parts/actor-equipment.html"}}
+    </div>
 
 
     {{!-- Moves Tab --}}
