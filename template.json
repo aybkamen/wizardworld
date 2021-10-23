@@ -135,6 +135,7 @@
         "covenfolk":{"size":0, "tiny":false, "small":false, "medium":false, "large":false},
         "warband":{"size":0, "tiny":false, "small":false, "medium":false, "large":false, "harm":"","armour":""},
         "income":{"deficient":false, "stable":false, "abundant":false},
+        "description": "",
         "surplus":"",
         "vulnerabilities":"",
         "fortifications":"",
