@@ -11,6 +11,7 @@
     "systems/wizardworld/templates/actor/parts/actor-spells.html",
     "systems/wizardworld/templates/actor/parts/actor-personal.html",
     "systems/wizardworld/templates/actor/parts/actor-health.html",
+    "systems/wizardworld/templates/actor/parts/actor-equipment.html",
     "systems/wizardworld/templates/actor/parts/covenant-library.html",
     "systems/wizardworld/templates/actor/parts/covenant-attributes.html",
     "systems/wizardworld/templates/actor/parts/covenant-covenfolk.html",

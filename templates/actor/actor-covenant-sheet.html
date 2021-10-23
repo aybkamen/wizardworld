@@ -35,6 +35,7 @@
     <a class="item" data-tab="magi">Magi</a>
     <a class="item" data-tab="covenfolk">Covenfolk</a>
     <a class="item" data-tab="resources">Resources</a>
+    <a class="item" data-tab="equipment">Items</a>
     <a class="item" data-tab="notes">Notes</a>
   </nav>
 
@@ -98,6 +99,10 @@
       </div>
     </div>
 
+    {{!-- Equipment Tab --}}
+    <div class="tab equipment" data-group="primary" data-tab="equipment">
+      {{> "systems/wizardworld/templates/actor/parts/actor-equipment.html"}}
+    </div>
 
   </section>
 </form>
